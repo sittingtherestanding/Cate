@@ -1,0 +1,134 @@
+<html>
+<head>
+	<title>Cate</title>
+
+	<link href = "styles/main.css" rel = "stylesheet" type = "text/css"/>
+
+	<meta name = "viewport" content = "width = device-width, initial-scale = 0.5, maximum-scale = 0.5, user-scalable = no" />
+	<meta name = "apple-mobile-web-app-capable" content = "yes" />
+</head>
+<body onload = "main()" ontouchmove = "touchMove()">
+	<div id = "hand"><img src = "images/tutorial/hand.png"></div>
+	<div id = "tap" style = "display: none"><img src = "images/tutorial/tap.png"></div>
+
+	<div id = "navigation">
+		<div id = "navigation_cards" class = "row" ontouchend = "openCards()">
+			<img src = "images/navigation/cards.png">
+		</div>
+		<div id = "navigation_quiz" class = "row" ontouchend = "openQuiz()">
+			<img src = "images/navigation/quiz.png">
+		</div>
+		<div id = "navigation_tutorial" class = "row" ontouchend = "openTutorial()">
+			<img src = "images/navigation/tutorial.png">
+		</div>
+	</div>
+
+	<!-- Make the silly scroll garbage work -->
+	<div id = "placeholder_container"></div>
+
+	<div id = "tutorial_container">
+		<div class = "rule" style = "background-color: #ff8598">
+			<p>
+				Mnemonic devices (pronounced "neh-mohn-icks") are an easy way to remember things.
+			</p>
+		</div>
+
+		<div class = "rule" style = "background-color: #c9d787">
+			<p>
+				To use mnemonics, we work to make stories and pictures in your mind.
+			</p>
+		</div>
+
+		<div class = "rule" style = "background-color: #ff8598">
+			<p>
+				Your brain can remember pictures better than facts.
+			</p>
+		</div>
+
+		<div class = "rule" style = "background-color: #c9d787">
+			<p>
+				There are four rules when making mnemonic stories:
+			</p>
+		</div>
+
+		<div class = "rule" style = "background-color: #ff8598">
+			<p>
+				1) Substitution: Picture one item instead of the other
+			</p>
+		</div>
+
+		<div class = "rule" style = "background-color: #c9d787">
+			<p>
+				2) Proportion: Try to see the items larger than life
+			</p>
+		</div>
+
+		<div class = "rule" style = "background-color: #ff8598">
+			<p>
+				3) Exaggeration: Imagine "millions" of something instead of just one
+			</p>
+		</div>
+
+		<div class = "rule" style = "background-color: #c9d787">
+			<p>
+				4) Action: Imagine something crashing, lifting, flying, climbing, etc.
+			</p>
+		</div>
+	</div>
+
+	<div id = "card_container">
+		<div id = "left_tap" ontouchend = "tapLeft()"></div>
+		<div id = "right_tap" ontouchend = "tapRight()"></div>
+		<div id = "row_name1" class = "name head" style = "left: 0px"></div>
+			<div id = "row_name2" class = "name head"></div>
+		<div id = "row_capital1" class = "capital head" style = "left: 0px"></div>
+			<div id = "row_capital2" class = "capital head"></div>
+		<div id = "row_summary1" class = "summary abs" style = "left: 0px"></div>
+			<div id = "row_summary2" class = "summary abs"></div>
+		<div id = "row_story1" class = "story abs" style = "left: 0px"></div>
+			<div id = "row_story2" class = "story abs"></div>
+		<div id = "row_state1" class = "state" style = "left: 0px"></div>
+			<div id = "row_state2" class = "state"></div>
+		<div id = "row_flag1" class = "flag" style = "left: 0px"></div>
+			<div id = "row_flag2" class = "flag"></div>
+	</div>
+
+	<div id = "quiz_container">
+		<div id = "quiz_head" class = "row" style = "left: 0px">
+			<div id = "quiz_head_content"></div>
+		</div>
+		<div id = "quiz_option_1" class = "row quiz_option" style = "left: 0px">
+			<div id = "quiz_option_1_content" class = "quiz_option_content"></div>
+			<div id = "quiz_option_select_1" class = "quiz_select" ontouchend = "quizOptionChoose1()">
+				<img src = "images/quiz/undecided.png">
+			</div>
+		</div>
+		<div id = "quiz_option_2" class = "row quiz_option" style = "left: 0px">
+			<div id = "quiz_option_2_content" class = "quiz_option_content"></div>
+			<div id = "quiz_option_select_2" class = "quiz_select" ontouchend = "quizOptionChoose2()">
+				<img src = "images/quiz/undecided.png">
+			</div>
+		</div>
+		<div id = "quiz_option_3" class = "row quiz_option" style = "left: 0px">
+			<div id = "quiz_option_3_content" class = "quiz_option_content"></div>
+			<div id = "quiz_option_select_3" class = "quiz_select" ontouchend = "quizOptionChoose3()">
+				<img src = "images/quiz/undecided.png">
+			</div>
+		</div>
+		<div id = "quiz_option_4" class = "row quiz_option" style = "left: 0px">
+			<div id = "quiz_option_4_content" class = "quiz_option_content"></div>
+			<div id = "quiz_option_select_4" class = "quiz_select" ontouchend = "quizOptionChoose4()">
+				<img src = "images/quiz/undecided.png">
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src = "databases/database.js"></script>
+
+<script src = "scripts/jquery.min.js"></script>
+<script src = "scripts/animations.js"></script>
+<script src = "scripts/functions.js"></script>
+<script src = "scripts/main.js"></script>
+
+</html>

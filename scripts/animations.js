@@ -163,6 +163,31 @@ var pointRight = function(delay)
 	}, delay + pointTapTime)
 }
 
+var pointSay = function(y, message)
+{
+	setTimeout(function()
+	{
+		document.getElementById('hand').style.left = '200px'
+		document.getElementById('hand').style.top = '-400px'
+		$("#hand").animate({top: y + 'px'}, pointSpeed)
+	}, delay)
+
+	setTimeout(function()
+	{
+		document.getElementById('speech_message').innerHTML = message
+		document.getElementById('speech').style.left = '90%'
+		document.getElementById('speech').style.top = '315px'
+		document.getElementById('speech').style.display = 'block'
+		nextState()
+
+		setTimeout(function()
+		{
+			document.getElementById('speech').style.display = 'none'
+			$("#hand").animate({top: '-400px'}, pointSpeed)
+		}, pointTapLife)
+	}, delay + pointTapTime)
+}
+
 var pointMenu = function(delay)
 {
 	setTimeout(function()

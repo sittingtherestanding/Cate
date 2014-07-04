@@ -134,6 +134,29 @@ html, body {
 			z-index: 7;
 		}
 
+		#speech {
+			position: absolute;
+
+			z-index: 7;
+		}
+
+			#speech_bubble {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+
+				z-index: 0;
+			}
+
+			#speech_message {
+				position: absolute;
+				left: 30px;
+				top: 30px;
+				color: #ffffff;
+				
+				z-index: 1;
+			}
+
 	#left_tap {
 		position: absolute;
 		left: 0px;

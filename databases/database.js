@@ -1,5 +1,12 @@
 var states = [
 	{
+		name: 'State Name',
+		url: 'Tutorial',
+		capital: 'State Capital',
+		summary: 'Mnemonic Summary',
+		story: 'Full Mnemonic'
+	},
+	{
 		name: 'Alabama',
 		capital: 'Montgomery',
 		summary: 'All Bananas - Mount Gum',

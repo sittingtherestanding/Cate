@@ -31,13 +31,18 @@ var openCards = function()
 			appReady = false
 
 			loadCards(0)
-			pointRight(700)
-			pointLeft(2400)
+			pointRight(1750)
+			pointRight(2800)
+			pointLeft(4000)
+			// pointSay(3500, 20, 'State')
+			// pointSay(5000, 100, 'Capital')
+			// pointSay(6500, 150, 'Summary')
+			// pointSay(8000, 200, 'Mnemonic')
 
 			setTimeout(function()
 			{
 				appReady = true
-			}, 3100)
+			}, 4500)
 		}
 	}
 }
@@ -163,29 +168,20 @@ var pointRight = function(delay)
 	}, delay + pointTapTime)
 }
 
-var pointSay = function(y, message)
+var pointSay = function(delay, y, message)
 {
 	setTimeout(function()
 	{
-		document.getElementById('hand').style.left = '200px'
-		document.getElementById('hand').style.top = '-400px'
-		$("#hand").animate({top: y + 'px'}, pointSpeed)
-	}, delay)
-
-	setTimeout(function()
-	{
 		document.getElementById('speech_message').innerHTML = message
-		document.getElementById('speech').style.left = '90%'
-		document.getElementById('speech').style.top = '315px'
+		document.getElementById('speech').style.left = '50%'
+		document.getElementById('speech').style.top = y + 'px'
 		document.getElementById('speech').style.display = 'block'
-		nextState()
 
 		setTimeout(function()
 		{
 			document.getElementById('speech').style.display = 'none'
-			$("#hand").animate({top: '-400px'}, pointSpeed)
-		}, pointTapLife)
-	}, delay + pointTapTime)
+		}, pointTapLife * 5)
+	}, delay)
 }
 
 var pointMenu = function(delay)

@@ -92,10 +92,8 @@ html, body {
 		display: table;
 
 		width: 90%;
-		height: 375px;
 
-		padding-left: 5%;
-		padding-right: 5%;
+		padding: 5%;
 
 		color: #ffffff;
 		font-family: 'lady_iceregular';
@@ -137,6 +135,8 @@ html, body {
 		#speech {
 			position: absolute;
 
+			margin-left: -67px;
+
 			z-index: 7;
 		}
 
@@ -152,6 +152,7 @@ html, body {
 				position: absolute;
 				left: 30px;
 				top: 30px;
+
 				color: #ffffff;
 				
 				z-index: 1;

@@ -59,7 +59,15 @@ var loadIndex = function(index)
 {
 	if (currentCard == 1)
 	{
-		document.getElementById('row_name1').innerHTML = '<p>' + (index + 1) + '. ' + states[index].name + '</p>'
+		if (index > 0)
+		{
+			document.getElementById('row_name1').innerHTML = '<p>' + index + '. ' + states[index].name + '</p>'
+		}
+		else
+		{
+			document.getElementById('row_name1').innerHTML = '<p>' + states[index].name + '</p>'
+		}
+		
 		document.getElementById('row_capital1').innerHTML = '<p>' + states[index].capital + '</p>'
 		document.getElementById('row_summary1').innerHTML = '<p>' + states[index].summary + '</p>'
 		document.getElementById('row_story1').innerHTML = '<p>' + states[index].story + '</p>'
@@ -77,7 +85,7 @@ var loadIndex = function(index)
 	}
 	else
 	{
-		document.getElementById('row_name2').innerHTML = '<p>' + (index + 1) + '. ' + states[index].name + '</p>'
+		document.getElementById('row_name2').innerHTML = '<p>' + index + '. ' + states[index].name + '</p>'
 		document.getElementById('row_capital2').innerHTML = '<p>' + states[index].capital + '</p>'
 		document.getElementById('row_summary2').innerHTML = '<p>' + states[index].summary + '</p>'
 		document.getElementById('row_story2').innerHTML = '<p>' + states[index].story + '</p>'

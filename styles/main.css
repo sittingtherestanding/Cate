@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'lady_iceregular';
-    src: url('http://www.jessemillar.com/cate/fonts/ladyic__-webfont.eot');
-    src: url('http://www.jessemillar.com/cate/fonts/ladyic__-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://www.jessemillar.com/cate/fonts/ladyic__-webfont.woff') format('woff'),
-         url('http://www.jessemillar.com/cate/fonts/ladyic__-webfont.ttf') format('truetype'),
-         url('http://www.jessemillar.com/cate/fonts/ladyic__-webfont.svg#lady_iceregular') format('svg');
+    src: url('http://www.sittingtherestanding.com/apps/cate/fonts/ladyic__-webfont.eot');
+    src: url('http://www.sittingtherestanding.com/apps/cate/fonts/ladyic__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.sittingtherestanding.com/apps/cate/fonts/ladyic__-webfont.woff') format('woff'),
+         url('http://www.sittingtherestanding.com/apps/cate/fonts/ladyic__-webfont.ttf') format('truetype'),
+         url('http://www.sittingtherestanding.com/apps/cate/fonts/ladyic__-webfont.svg#lady_iceregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }

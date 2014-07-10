@@ -3,8 +3,8 @@ var states = [
 		name: 'State Name',
 		url: 'Tutorial',
 		capital: 'State Capital',
-		summary: 'Mnemonic Summary',
-		story: 'Full Mnemonic'
+		summary: 'Mnemonic Words',
+		story: 'Mnemonic Image Description'
 	},
 	{
 		name: 'Alabama',

@@ -40,6 +40,8 @@ var random = function(min, max)
 var loadCards = function(state)
 {	
 	loadIndex(currentIndex)
+
+	scrolled = false
 }
 
 var loadState = function(state)
@@ -202,24 +204,24 @@ var quizOption4 = 0
 
 var loadQuiz = function()
 {	
-	currentState = random(0, states.length - 1) // Select the state that will coorespond to one of the quizOptions
+	currentState = random(1, states.length - 1) // Select the state that will coorespond to one of the quizOptions
 
-	quizOptions = [currentState, random(0, states.length - 1), random(0, states.length - 1), random(0, states.length - 1)] // Load the main state as the first and random for the last three
+	quizOptions = [currentState, random(1, states.length - 1), random(1, states.length - 1), random(1, states.length - 1)] // Load the main state as the first and random for the last three
 
 	// Make sure the randoms don't match
 	while (quizOptions[1] == currentState || quizOptions[1] == quizOptions[2] || quizOptions[1] == quizOptions[3])
 	{
-		quizOptions[1] = random(0, states.length - 1)
+		quizOptions[1] = random(1, states.length - 1)
 	}
 
 	while (quizOptions[2] == currentState || quizOptions[2] == quizOptions[1] || quizOptions[2] == quizOptions[3])
 	{
-		quizOptions[2] = random(0, states.length - 1)
+		quizOptions[2] = random(1, states.length - 1)
 	}
 
 	while (quizOptions[3] == currentState || quizOptions[3] == quizOptions[1] || quizOptions[3] == quizOptions[2])
 	{
-		quizOptions[3] = random(0, states.length - 1)
+		quizOptions[3] = random(1, states.length - 1)
 	}
 
 	// After selecting the quizOptions, shuffle them
@@ -252,6 +254,8 @@ var loadQuiz = function()
 	document.getElementById('quiz_option_4_content').innerHTML = '<p>' + states[quizOptions[quizOption4]].capital + '</p>'
 
 	quizReady = true
+
+	scrolled = false
 }
 
 var quizOptionChoose1 = function()

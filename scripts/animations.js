@@ -7,6 +7,7 @@ var cardDelay = 110
 var animationDelay = 75
 var animationSpeed = 275
 
+var appReady = true
 var tutorialShown = false
 
 var openCards = function()
@@ -34,10 +35,6 @@ var openCards = function()
 			pointRight(1750)
 			pointRight(2800)
 			pointLeft(4000)
-			// pointSay(3500, 20, 'State')
-			// pointSay(5000, 100, 'Capital')
-			// pointSay(6500, 150, 'Summary')
-			// pointSay(8000, 200, 'Mnemonic')
 
 			setTimeout(function()
 			{

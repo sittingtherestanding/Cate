@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.sittingtherestanding.cate" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+	<name>Cate</name>
+	<description>
+		Learn the fifty states using mnemonics.
+	</description>
+	<author email="sittingtherestanding@gmail.com" href="http://www.sittingtherestanding.com">
+		Sitting There Standing
+	</author>
+
+	<preference name="phonegap-version" value="3.5.0" />
+
+	<preference name="orientation" value="portrait" />
+	<preference name="disallowOverscroll" value="true" />
+	<preference name="webviewbounce" value="false" />
+	<preference name="EnableViewportScale" value="true" /> <!-- For retina -->
+
+	<!-- Some, if not most, of these plugins require a reference to "cordova.js" which is added by PhoneGap Build -->
+	<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" /> <!-- Hides the status bar -->
+	<gap:plugin name="nl.x-services.plugins.insomnia" version="4.0.1" /> <!-- Keep the screen awake but don't forget to actually start it ondeviceready -->
+
+	<icon src="icon.png" />
+	<gap:splash src="splash.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-iphone-portrait.png" width="320" />
+    <gap:splash gap:platform="ios" height="960" src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
+    <gap:splash gap:platform="ios" height="1136" src="res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" /> <!-- Needed to "enable" fullscreen on iPhone 5+ -->
+    <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
+    <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
+
+	<access origin="*" />
+</widget>
